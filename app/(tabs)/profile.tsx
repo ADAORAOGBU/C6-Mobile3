@@ -12,6 +12,7 @@ export default function Profile (){
   const [lastName, setLastName] = useState('');
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  const [confirmPassword, setConfirmPassword] = useState('');
     const handleSubmit = () => {
     alert(`Welcome, ${firstName} ${lastName}! Logging in as ${username}...`);
   
@@ -27,7 +28,7 @@ export default function Profile (){
       <ScrollView contentContainerStyle={styles.container}>
         
         <View style={styles.header}>
-          <Text style={styles.title}>Welcome TechCrush Cohort 6</Text>
+          <Text style={styles.title}>Welcome TechCrush Cohort 6 TABS PROFILE PAGE</Text>
         </View>
         {/* If showForm is FALSE, show the big LOGIN button */}
         {!showForm ? (
@@ -70,7 +71,14 @@ export default function Profile (){
               onChangeText={setPassword}
               secureTextEntry={true}
             />
-
+<Text style={styles.label}>Confirm Password</Text>
+            <TextInput
+              style={styles.inputBox}
+              placeholder='Enter Confirm Password'
+              value={confirmPassword}
+              onChangeText={setConfirmPassword}
+              secureTextEntry={true}
+            />
             <TouchableOpacity style={styles.submitButton} onPress={handleSubmit}>
               <Text style={styles.buttonText}>SUBMIT</Text>
             </TouchableOpacity>
