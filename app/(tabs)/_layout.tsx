@@ -16,12 +16,11 @@ export default function TabLayout() {
         name="settings" 
         options={{ 
           title: "Settings",
-          tabBarIcon: ({ color, size }) => <Ionicons name="settings" color={color} size={size} />,
+          tabBarIcon: ({ color='light blue', size }) => <Ionicons name="settings" color={color} size={size} />,
         }} 
       />
 
-      {/* Tab 4: Notifications (Another one!) */}
-      <Tabs.Screen 
+          <Tabs.Screen 
         name="notifications" 
         options={{ 
           title: "Alerts",
